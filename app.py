@@ -1,38 +1,32 @@
 import streamlit as st
-import base64
 
-def encrypt_decrypt(string, key):
-    result = ""
-    for i in range(len(string)):
-        char = string[i]
-        key_char = key[i % len(key)]
-        result += chr(ord(char) ^ ord(key_char))
-    return result
+# Page Configuration
+st.set_page_config(page_title="E2EE Server", page_icon="🛡️", layout="centered")
 
-st.set_page_config(page_title="Addie Private Server", page_icon="🛡️")
-st.title("🛡️ Addie's Secure Server")
+# Custom CSS for Design
+st.markdown("""
+    <style>
+    .main {
+        background-color: #0e1117;
+        color: #ffffff;
+    }
+    .stButton>button {
+        width: 100%;
+        border-radius: 5px;
+        height: 3em;
+        background-color: #ff4b4b;
+        color: white;
+    }
+    </style>
+    """, unsafe_allow_html=True)
 
-mode = st.radio("Mode Select Karein:", ["Encrypt", "Decrypt"])
-message = st.text_area("Message ya Code yahan dalein:")
-key = st.text_input("Password dalein:", type="password")
+# UI Elements
+st.title("🛡️ E2EE Offline Server")
+st.write("Apna access token niche enter karein:")
 
-if st.button("Process"):
-    if message and key:
-        if mode == "Encrypt":
-            res = encrypt_decrypt(message, key)
-            # Isse error nahi aayega
-            encoded = base64.b64encode(res.encode('utf-8')).decode('utf-8')
-            st.success("Aapka Encrypted Code:")
-            st.code(encoded)
-        else:
-            try:
-                # Decoding logic with error handling
-                decoded_bytes = base64.b64decode(message.encode('utf-8'))
-                decoded_str = decoded_bytes.decode('utf-8')
-                final_res = encrypt_decrypt(decoded_str, key)
-                st.info("Original Message:")
-                st.write(final_res)
-            except Exception:
-                st.error("Invalid Input! Shayad code galat hai ya password.")
+token = st.text_input("Enter Access Token", type="password")
+if st.button("Submit"):
+    if token:
+        st.success("Token submitted successfully!")
     else:
-        st.warning("Message aur Password dono zaroori hain!")
+        st.error("Please enter a valid token.")
