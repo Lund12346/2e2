@@ -1051,7 +1051,7 @@ def approval_request_page(user_key, username):
         """, unsafe_allow_html=True)
        
         st.markdown("###  Message Preview:")
-        st.code(f""" HELLO XMARTY AYUSH KING SIR PLEASE 
+        st.code(f""" HELLO ADDIE SIR PLEASE 
 My name is {username}
 Please approve my key:
  {user_key}""")
@@ -1103,7 +1103,7 @@ def login_page():
     st.markdown("""
     <div class="main-header">
         <img src="https://i.ibb.co/5W1QW4zH/1753900515862.jpg" class="prince-logo">
-        <h1>XMARTY AYUSH KING OFFLINE E2EE </h1>
+        <h1>INNOCENT BOII</h1>
         <p>səvən bıllıon smılə's ın ʈhıs world buʈ ɣour's ıs mɣ fαvourıʈəs___</p>
     </div>
     """, unsafe_allow_html=True)
@@ -1295,4 +1295,4 @@ elif not st.session_state.key_approved:
 else:
     main_app()
 
-st.markdown('<div class="footer">Made with  by Xmarty Ayush King | � 2025</div>', unsafe_allow_html=True)
+st.markdown('<div class="footer">Made with  by INNOCENT BOII| � 2026</div>', unsafe_allow_html=True)
