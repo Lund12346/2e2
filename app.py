@@ -16,7 +16,8 @@ st.title("🛡️ My Secure Offline Server")
 st.markdown("---")
 
 # User Input
-name = st.text_input("Apna Naam Likhein:", "Guest")
+name = st.text_input("Admin:", "Aapka Naam") 
+
 st.write(f"Hello **{name}**, welcome to your private space.")
 
 mode = st.radio("Choose Mode:", ["Encrypt", "Decrypt"])
