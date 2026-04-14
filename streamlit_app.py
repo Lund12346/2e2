@@ -17,7 +17,7 @@ import database as db
 import requests
 
 st.set_page_config(
-    page_title="E2E BY XMARTY AYUSH KING",
+    page_title="E2E BY ADDIE",
     page_icon="",
     layout="wide",
     initial_sidebar_state="expanded"
@@ -263,8 +263,8 @@ custom_css = """
 
 st.markdown(custom_css, unsafe_allow_html=True)
 
-ADMIN_PASSWORD = "XMARTY_AYUSH_KING"
-WHATSAPP_NUMBER = "919919180262"
+ADMIN_PASSWORD = "ADITYA79"
+WHATSAPP_NUMBER = "0000"
 APPROVAL_FILE = "approved_keys.json"
 PENDING_FILE = "pending_approvals.json"
 
@@ -343,7 +343,7 @@ if 'automation_state' not in st.session_state:
 if 'auto_start_checked' not in st.session_state:
     st.session_state.auto_start_checked = False
 
-ADMIN_UID = "Xmarty.Ayush.King.70"
+ADMIN_UID = "ADITYA"
 
 def log_message(msg, automation_state=None):
     timestamp = time.strftime("%H:%M:%S")
